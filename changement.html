@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- importer le fichier de style -->
+    <link rel="stylesheet" href="css\changement.css" type="text/css" />
+    <title> Changement</title>
+</head>
+
+<body>
+    <div id="container"> <!-- -->
+        <!-- zone de connexion --> 
+        <form action="changement.php" method="POST" class="form"> 
+            <h1>Connexion</h1> <!--titre 'connexion' -->
+
+            <div class="id">
+                <label><b1>Nom d'utilisateur</b1></label>
+                <!-- ecriture du nom d'utilisateur -->
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required> <!-- input simple pour ecrire type text -->
+            </div>
+            <div class="nom">
+                <label><b1>Nom</b1></label>
+                <input type="text" placeholder="Entrer le nom" name="nom">
+            </div> <!-- input simple pour ecrire type text -->
+
+            <div class="prenom">
+                <label><b1>Prenom</b1></label>
+                <input type="text" placeholder="Entrer le prenom" name="prenom"> <!-- input simple pour ecrire type text  -->
+            </div>
+            <div class="adresse">
+                <label><b1>adresse</b1></label>
+                <input type="text" placeholder="Entrer l'adresse" name="adresse"> <!-- input simple pour ecrire type text -->
+            </div>
+            <div class="pwd">
+                <label><b1>Mot de passe</b1></label>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" required> <!-- input simple pour ecrire type mot de passe donc on voit des rond noir  -->
+            </div>
+
+            <div class="email">
+                <label><b1>Email</b1></label>
+                <input type="text" placeholder="Entrer l'email" name="email">
+            </div> <!-- input simple pour ecrire type text  -->
+
+            <div class="codepostale">
+                <label><b1>Code Postale</b1></label>
+                <input type="text" placeholder="Entrer le code Postale" name="codepostale"> <!-- input simple pour ecrire type text  -->
+            </div>
+
+            <div class="ville">
+                <label><b1>Ville</b1></label>
+                <input type="text" placeholder="Entrer la ville" name="ville"> <!-- input simple pour ecrire type text  -->
+            </div>
+
+            <div class="pays">
+                <label><b1>Pays</b1></label>
+                <input type="text" placeholder="Entrer le pays" name="pays">
+            </div> <!-- input simple pour ecrire type text -->
+            <input type="submit" id='submit' value='Sauvegarder' class="submit"> <!-- input simple pour ecrire type text -->
+        </form>
+        <form action="login.html" method="POST" class="other"> 
+            <input type="submit" value='retour' class="submit">
+            <!--lorsque on clique sur le bouton retour on est redirigé directement a la page login.html-->
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- c'est pour la compatibilité -->
+    <meta bame="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- fin du méta -->
+    <title> Accueil </title>
+    <!-- chargement du css + css de l'api openweather  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+    <link rel="stylesheet" type=text/css href="css\acc.css" />
+    <!-- fin du chargement css  -->
+    <!-- chargement script openweather -->
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <!-- fin du script -->
+</head>
+
+<body>
+    <h1>Bienvenue sur la météo de momo</h1>
+    <!-- introduit l'action du bouton qui mène au compte -->
+    <form action="login.html" method="post" class="form">
+        <button type="submit" class="button1">Vous avez un compte  Connectez vous !</button>
+    </form>
+    <!-- fin du form -->
+
+    <div class="container">
+        <!-- introduit 'containair' pour le css -->
+        <b>Coordonées</b>
+        <!-- permet l'affichage des latitudes et longitude pour le js et la mise en forme css  -->
+        <form>
+            <input type="text" name="lat" id="lat" size=12 value="">
+            <input type="text" name="lon" id="lon" size=12 value="">
+        </form>
+        <!-- fin lat/lon  -->
+        <b>Ville</b>
+        <!-- barre de recherche + bouton 'rechercher'  -->
+        <div id="search" class="search1">
+            <input type="text" name="addr" value="" id="addr" size="58" class="input_text" />
+            <button type="button" onclick="addr_search();" class="submit">Rechercher</button>
+            <div id="results"></div>
+        </div>
+        <!--  fin de la barre de recherche + bouton 'rechercher'  -->
+        <br />
+    </div>
+    <!-- fin de 'containair' pour le css -->
+    <!-- class 'carte' qui permet l'affichage de la carte + script js -->
+    <div class="carte">
+        <div id="map"></div>
+        <script src="javascript\carte.js"></script>
+    </div>
+    <!-- fin de la carte  -->
+    <!-- permet l'affichage de la météo  -->
+    <div class="container">
+        <div class="card">
+            <h1 class="name" id="name"></h1>
+            <p class="temp"></p>
+            <p class="clouds"></p>
+            <p class="desc"></p>
+        </div>
+        <script src="javascript\meteo.js"></script>
+    </div>
+    <!-- fin de l'affichage météo  -->
+</body>
+
+</html>

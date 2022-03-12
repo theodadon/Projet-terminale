@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- importer le fichier de style -->
+    <link rel="stylesheet" href="css\changement.css" type="text/css" />
+    <title> Inscription </title>
+</head>
+
+<body>
+    <div id="container">
+        <!-- mise en forme du formulaire -->
+        <!-- zone de connexion avce formulaire pour ensuite l'envoyer a inscription.php -->
+        <form action="inscription.php" method="POST" class="form">
+            <h1>Inscription</h1>
+
+            <div class="id">
+                <label><b1>Nom d'utilisateur</b1></label>
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+            </div>
+            <div class="nom">
+                <label><b1>Nom</b1></label>
+                <input type="text" placeholder="Entrer le nom" name="nom">
+            </div>
+
+            <div class="prenom">
+                <label><b1>Prenom</b1></label>
+                <input type="text" placeholder="Entrer le prenom" name="prenom">
+            </div>
+            <div class="adresse">
+                <label><b1>adresse</b1></label>
+                <input type="text" placeholder="Entrer l'adresse" name="adresse">
+            </div>
+            <div class="pwd">
+                <label><b1>Mot de passe</b1></label>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+            </div>
+
+            <div class="email">
+                <label><b1>Email</b1></label>
+                <input type="text" placeholder="Entrer l'email" name="email" required>
+            </div>
+
+            <div class="codepostale">
+                <label><b1>Code Postal</b1></label>
+                <input type="text" placeholder="Entrer le code Postale" name="codepostale">
+            </div>
+
+            <div class="ville">
+                <label><b1>Ville</b1></label>
+                <input type="text" placeholder="Entrer la ville" name="ville">
+            </div>
+
+            <div class="pays">
+                <label><b1>Pays</b1></label>
+                <input type="text" placeholder="Entrer le pays" name="pays">
+            </div>
+            <input type="submit" id='submit' value='Sauvegarder' class="submit">
+        </form>
+        <!-- fin de la recup des données -->
+        <form action="login.html" method="POST" class="other">
+            <!-- bouton qui renvoie vers login  -->
+            <input type="submit" value='retour' class="submit">
+        </form>
+    </div>
+</body>
+
+</html>

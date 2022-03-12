@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- importer le fichier de style -->
+    <link rel="stylesheet" href="css\login.css" type="text/css" /> <!--  -->
+    <title> Login </title> 
+</head>
+
+<body>
+    <div id="container"> 
+        <!-- zone de connexion -->
+        <form action="verification.php" method="POST" class="form">
+            <h1>Connexion</h1> <!-- titre connexion en grand -->
+            <div class="id">
+                <label><b1>Nom d'utilisateur</b1></label> 
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required> <!-- espace pour ecrire le nom d'utilisateur -->
+            </div>
+            <div class="pwd"> 
+                <label><b1>Mot de passe</b1></label>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" required> <!-- espace pour ecrire son mot de passe sous la forme de petit rond noir -->
+            </div>
+            <input type="submit" id='submit' value='LOGIN' class="submit">
+            <!-- bouton simple pour ce login a verification.php-->
+        </form>
+        <form action="inscription.html" method="POST">
+            <input type="submit" value='Enregistrement'>
+        <!-- en cliquant sur le bouton enregistrement on est rediriger sur la page inscription.html-->
+        </form>
+    </div>
+</body>
+
+</html>
