@@ -1,0 +1,79 @@
+*, ::before, ::after {  /* objectifs, principalement le remplacement / la réinitialisation de certains styles par défau */
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;  /* c'est comme le style d'ecriture */
+    height: 100vh;
+}
+
+/* loader */
+
+.loader {
+    position: absolute; /* pour qu'il soit placer au dessus de tout pour eviter les beug*/
+    width: 100%; /* pour que le loader prenne tout l'espace disponible */
+    height: 100%; /* pareil */
+    background: #000; /* la couleur noir de fond  */
+    display: flex; /* pour définir le type d'affichage  */
+    justify-content: center; /* pour centrer les lettre */
+    align-items: center; /* pareil alignant  */
+}
+.lettre {
+    color: #484848; /* c'est la couleur jaune des lettres */
+    font-size: 80px; /* la taille des lettre */
+    letter-spacing: 15px; /* l'espace entre les lettres */
+    margin-bottom: 150px; /* pour remonter les lettre afin d'avoir un rendu au centre mais un peu au dessus */
+    animation: flash 1.2s linear infinite; /* l'animation sous forme de flash de 1.2 seconde de maniere lineaire*/
+}
+
+@keyframes flash { /* detais de l'animation */
+    0% {
+        color: #fff900; /* couleur des lettre animé*/
+        text-shadow: 0 0 7px #fff900; /* c'est pour avoir l'effet neon flou derrier les lettres */
+    }
+    90% { /* la on est a 90% de l'animation */
+        color: #484848; /* la couleur diminue */
+        text-shadow: none; /* on retire l'effet de flou en arriere plan */
+    }
+    100% {
+        color: #fff900; /* on revient a la couleur de base du noir transparent */
+        text-shadow: 0 0 7px #fff900; /* avec un leger flou qui reient pour preparé la prochaine boucle*/
+    }
+}
+
+/* donc la on va appliqué l'animation a chacune de nos lettres suivant un temps precis pour
+avoir un effet snake sur les lettre */
+
+.lettre:nth-child(1){ /* on cible le premiere enfant donc la lettre C */
+    animation-delay: 0.1s; /* on lui met un delais de 0.1 seconde */
+}
+.lettre:nth-child(2){ /* on cible le premiere enfant donc la lettre H */
+    animation-delay: 0.2s; /* on lui ajoute en plus 0.1 seconde */
+}
+.lettre:nth-child(3){ /* on cible le premiere enfant donc la lettre A */
+    animation-delay: 0.3s; /* on lui ajoute en plus 0.1 seconde */
+}
+.lettre:nth-child(4){ /* on cible le premiere enfant donc la lettre R */
+    animation-delay: 0.4s; /* on lui ajoute en plus 0.1 seconde */
+}
+.lettre:nth-child(5){ /* on cible le premiere enfant donc la lettre G */
+    animation-delay: 0.5s; /* on lui ajoute en plus 0.1 seconde */
+}
+.lettre:nth-child(6){ /* on cible le premiere enfant donc la lettre E */
+    animation-delay: 0.6s; /* on lui ajoute en plus 0.1 seconde */
+}
+.lettre:nth-child(7){ /* on cible le premiere enfant donc la lettre M */
+    animation-delay: 0.7s; /* on lui ajoute en plus 0.1 seconde */
+}
+.lettre:nth-child(8){ /* on cible le premiere enfant donc la lettre E */
+    animation-delay: 0.8s; /* on lui ajoute en plus 0.1 seconde */
+}
+.lettre:nth-child(9){ /* on cible le premiere enfant donc la lettre N */
+    animation-delay: 0.9s; /* on lui ajoute en plus 0.1 seconde */
+}
+.lettre:nth-child(10){ /* on cible le premiere enfant donc la lettre T */
+    animation-delay: 1s; /* on lui ajoute en plus 0.1 seconde */
+}
+

@@ -1,0 +1,13 @@
+body{
+  background-image: url("");
+  background-color : RGBa(255, 255, 0, 0.2);
+  background-repeat:no-repeat;
+  color:black;
+}
+
+li {
+  height: 2em;
+  margin: 0 auto;
+  width: 385px;
+
+}
